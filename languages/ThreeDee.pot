@@ -1,0 +1,659 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-10 18:02+0300\n"
+"PO-Revision-Date: 2021-01-10 18:02+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Eazy Po 0.9.5.3\n"
+
+#: includes/ThreeDee-admin-shortcode-builder.php:14
+msgid "Please enable Load Everywhere option in General Settings!"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:59
+msgid "Shortcode"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:59
+msgid "Generate"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:63
+#: includes/ThreeDee-admin.php:693 includes/ThreeDee-functions.php:503
+msgid "Set model"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:68
+#: includes/ThreeDee-admin.php:463
+msgid ""
+"Adjust angle with the left mouse button. Zoom with the scroll button. Adjust "
+"camera position with the right mouse button."
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:75
+#: includes/ThreeDee-admin.php:408
+msgid ""
+"For best performance <a href=\"https://modelconverter.com/convert.html"
+"\">convert</a> the model to GLB format."
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:76
+#: includes/ThreeDee-admin.php:409
+msgid ""
+"For best performance <a href=\"https://myminifactory.github.io/stl2gltf/"
+"\">convert</a> the model to GLB format."
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:83
+#: includes/ThreeDee-admin.php:416
+msgid "File Size"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:83
+#: includes/ThreeDee-admin.php:217 includes/ThreeDee-admin.php:237
+#: includes/ThreeDee-admin.php:416
+msgid "mb"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:84
+#: includes/ThreeDee-admin.php:417
+msgid "Polygon Count"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:91
+#: includes/ThreeDee-admin.php:424
+msgid "Remember camera position"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:119
+#: includes/ThreeDee-admin.php:443
+msgid "Repair"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:120
+#: includes/ThreeDee-admin.php:444
+msgid "Reduce"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:121
+#: includes/ThreeDee-admin.php:446
+msgid "Fit camera"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:124
+#: includes/ThreeDee-admin.php:449
+msgid "X"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:126
+#: includes/ThreeDee-admin.php:451
+msgid "Y"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:128
+#: includes/ThreeDee-admin.php:453
+msgid "Z"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:130
+#: includes/ThreeDee-admin.php:455
+msgid "Z Offset"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:139
+msgid "Canvas Width"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:141
+msgid "Canvas Height"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:147
+#: includes/ThreeDee-admin.php:471 includes/ThreeDee-functions.php:522
+msgid "Color"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:149
+#: includes/ThreeDee-admin.php:107 includes/ThreeDee-admin.php:473
+msgid "Background Color"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:155
+#: includes/ThreeDee-admin.php:479 includes/ThreeDee-functions.php:529
+msgid "Shininess"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:158
+#: includes/ThreeDee-admin.php:482 includes/ThreeDee-functions.php:533
+msgid "Plastic"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:159
+#: includes/ThreeDee-admin.php:483 includes/ThreeDee-functions.php:534
+msgid "Wood"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:160
+#: includes/ThreeDee-admin.php:484 includes/ThreeDee-functions.php:535
+msgid "Metal"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:163
+#: includes/ThreeDee-admin.php:119 includes/ThreeDee-admin.php:487
+msgid "Grid Color"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:165
+#: includes/ThreeDee-admin.php:198 includes/ThreeDee-admin.php:489
+msgid "Show Grid"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:167
+#: includes/ThreeDee-admin.php:111 includes/ThreeDee-admin.php:491
+msgid "Fog Color"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:169
+#: includes/ThreeDee-admin.php:180 includes/ThreeDee-admin.php:493
+msgid "Show Fog"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:175
+#: includes/ThreeDee-admin.php:499 includes/ThreeDee-functions.php:540
+msgid "Transparency"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:178
+#: includes/ThreeDee-admin.php:502 includes/ThreeDee-functions.php:544
+msgid "Opaque"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:179
+#: includes/ThreeDee-admin.php:503 includes/ThreeDee-functions.php:545
+msgid "Resin"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:180
+#: includes/ThreeDee-admin.php:504 includes/ThreeDee-functions.php:546
+msgid "Glass"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:183
+#: includes/ThreeDee-admin.php:115 includes/ThreeDee-admin.php:507
+msgid "Ground Color"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:185
+#: includes/ThreeDee-admin.php:188 includes/ThreeDee-admin.php:509
+msgid "Show Ground"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:190
+#: includes/ThreeDee-admin.php:518
+msgid "Display mode"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:194
+#: includes/ThreeDee-admin-shortcode-builder.php:214
+#: includes/ThreeDee-admin.php:522 includes/ThreeDee-admin.php:542
+msgid "3D model"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:195
+#: includes/ThreeDee-admin-shortcode-builder.php:215
+#: includes/ThreeDee-admin.php:523 includes/ThreeDee-admin.php:543
+msgid "PNG image"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:196
+#: includes/ThreeDee-admin-shortcode-builder.php:216
+#: includes/ThreeDee-admin.php:524 includes/ThreeDee-admin.php:544
+msgid "GIF image"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:197
+#: includes/ThreeDee-admin-shortcode-builder.php:217
+#: includes/ThreeDee-admin.php:525 includes/ThreeDee-admin.php:545
+msgid "WEBM video"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:210
+#: includes/ThreeDee-admin.php:538
+msgid "Mobile display mode"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:229
+#: includes/ThreeDee-admin.php:123 includes/ThreeDee-admin.php:557
+msgid "Light Sources"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:254
+#: includes/ThreeDee-admin.php:582
+msgid "Show Shadow"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:258
+#: includes/ThreeDee-admin.php:586
+msgid "Show Mirror"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:262
+#: includes/ThreeDee-admin.php:164 includes/ThreeDee-admin.php:590
+msgid "Auto Rotation"
+msgstr ""
+
+#: includes/ThreeDee-admin-shortcode-builder.php:266
+msgid "Show Controls"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:75
+msgid "ThreeDeeiewer Dashboard"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:78
+msgid "General Settings"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:79
+msgid "Shortcode Builder"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:86
+msgid "Default Settings"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:89
+msgid "Canvas Resolution"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:90
+msgid "Width"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:90
+msgid "Height"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:93
+msgid "Shading"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:96
+msgid "Flat"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:97
+msgid "Smooth"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:103
+msgid "Model Color"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:147
+msgid "Loading Image"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:154
+msgid "View3D Image"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:168
+msgid "Show Toobar"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:170
+msgid "Enables frontend tools: fullscreen, zoom, auto rotation, screenshot"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:174
+msgid "Enable Controls (Zoom/Pan)"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:176
+msgid "Enables manual controls (zoom/pan) by mouse or swipe"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:184
+msgid "Show Shadows"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:193
+msgid "Ground Mirror"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:204
+msgid "Other"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:208
+msgid "Load Everywhere"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:212
+msgid ""
+"Enable if you need to load Woo 3D viewer css and js files on all pages of "
+"the site."
+msgstr ""
+
+#: includes/ThreeDee-admin.php:216
+msgid "File Chunk Size"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:218
+msgid ""
+"Used for uploading WEBM and GIF files rendered by the plugin. Keep it under "
+"upload_max_filesize and post_max_size PHP directives."
+msgstr ""
+
+#: includes/ThreeDee-admin.php:224
+msgid "Skip animation on mobile devices"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:228
+msgid "Disable rotation on mobile devices for better performance."
+msgstr ""
+
+#: includes/ThreeDee-admin.php:232
+msgid "Model compression"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:236
+msgid "Compress models (ZIP) for faster loading."
+msgstr ""
+
+#: includes/ThreeDee-admin.php:237
+msgid "Compress models larger than"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:239
+msgid ""
+"PHP zip extension is not enabled. Contact your hosting tech support to "
+"enable it."
+msgstr ""
+
+#: includes/ThreeDee-admin.php:245
+msgid "Use cross domain proxy"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:249
+msgid "Proxy makes possible loading models from 3rd party sites."
+msgstr ""
+
+#: includes/ThreeDee-admin.php:250
+msgid "Trusted domains"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:251
+msgid ""
+"Comma delimited list of domains you are loading models from. Please include "
+"both www and non-www domains, i.e.: example1.com, www.example1.com"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:261
+msgid "Save Changes"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:278
+msgid "Product model"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:594
+msgid "Show View 3D Button"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:663
+msgid "Edit/Preview"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:669
+msgid "Remove"
+msgstr ""
+
+#: includes/ThreeDee-admin.php:687
+msgid "Uploaded! You can now save the product."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:206 includes/ThreeDee-functions.php:352
+msgid "Not available in your browser"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:207
+msgid "Model not found!"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:208
+msgid "Please enable Preview Model in the settings of the plugin"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:209
+msgid "Please upload the model first"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:210
+msgid "WEBM rendering works only in Chrome browser"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:211
+msgid "Please don't switch to other tabs while rendering"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:212
+msgid ""
+"The amount of data we are going to submit is larger than post_max_size in "
+"php.ini ("
+msgstr ""
+
+#: includes/ThreeDee-functions.php:213
+msgid "Repairing.."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:214
+msgid "Repairing.. done!"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:215
+msgid "Error report:"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:216
+msgid "Repairing.. fail!"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:217
+msgid "No errors found."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:218
+msgid "Degenerate facets"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:219
+msgid "Edges fixed"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:220
+msgid "Facets removed"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:221
+msgid "Facets added"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:222
+msgid "Facets reversed"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:223
+msgid "Backwards edges"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:225
+msgid "Can not repair textured models yet!"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:226
+msgid "Can repair only STL and OBJ models"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:227
+msgid ""
+"The model will be sent to our server for repair.\n"
+"Repairing some models with very faulty geometries may result in broken "
+"models.\n"
+"Click OK if you agree."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:228
+msgid "Reducing.."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:229
+msgid "Reducing.. done!"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:230
+msgid "No reduction needed"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:231
+#, php-format
+msgid "% of triangles to reduce"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:232
+msgid "Can not reduce textured models yet!"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:233
+msgid "Can reduce only STL and OBJ models"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:234
+msgid ""
+"The model will be sent to our server for polygon reduction.\n"
+" Click OK if you agree."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:353
+msgid "Upgrade to ThreeDeeiewer PRO to have multiple viewers on one page!"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:494
+msgid "ThreeDeeiewer settings"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:499
+msgid "Custom Model"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:501
+msgid "STL, OBJ or ZIP file"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:504
+msgid "Delete"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:508 includes/ThreeDee-functions.php:1097
+#: includes/ThreeDee-functions.php:1344
+msgid "Rotation"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:532 includes/ThreeDee-functions.php:543
+msgid "Default"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1093 includes/ThreeDee-functions.php:1340
+msgid "Fullscreen"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1094 includes/ThreeDee-functions.php:1341
+msgid "Wireframe"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1095 includes/ThreeDee-functions.php:1342
+msgid "Zoom In"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1096 includes/ThreeDee-functions.php:1343
+msgid "Zoom Out"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1098 includes/ThreeDee-functions.php:1345
+msgid "Screenshot"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1099 includes/ThreeDee-functions.php:1346
+msgid "Help"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1104 includes/ThreeDee-functions.php:1351
+msgid "Controls"
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1108 includes/ThreeDee-functions.php:1355
+msgid "Rotate with the left mouse button. "
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1109 includes/ThreeDee-functions.php:1356
+msgid "Zoom with the scroll button. "
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1110 includes/ThreeDee-functions.php:1357
+msgid "Adjust camera position with the right mouse button."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1111 includes/ThreeDee-functions.php:1358
+msgid "Double-click to enter the fullscreen mode."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1112 includes/ThreeDee-functions.php:1359
+msgid "On mobile devices swipe to rotate."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1113 includes/ThreeDee-functions.php:1360
+msgid "On mobile devices pinch two fingers together or apart to adjust zoom."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1656 includes/ThreeDee-functions.php:1794
+msgid "The file does not exist."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1658 includes/ThreeDee-functions.php:1796
+msgid "The server does not support curl."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1693
+msgid "Could not create a zip archive."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1748
+msgid "Server not found."
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1821
+msgid "Repair error: "
+msgstr ""
+
+#: includes/ThreeDee-functions.php:1894 includes/ThreeDee-functions.php:1932
+msgid "Unknown error."
+msgstr ""
+
+#: woocommerce/single-product/product-image20.php:42
+#: woocommerce/single-product/product-image263.php:47
+msgid "Placeholder"
+msgstr ""
