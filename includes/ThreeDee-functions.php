@@ -35,7 +35,7 @@ function ThreeDee_check_install() {
 
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
-	$default_image_url = str_replace('http:','',plugins_url()).'/woo-3d-viewer/images/';
+	$default_image_url = str_replace('http:','',plugins_url()).'/threedee/images/';
 
 	$current_settings = get_option( 'ThreeDee_settings' );
 
@@ -149,15 +149,12 @@ function ThreeDee_enqueue_scripts_backend() {
 		wp_enqueue_script( 'jquery-ui-core' );
 		wp_enqueue_script( 'jquery-ui-tabs' );
 		wp_enqueue_script( 'jquery-ui-dialog' );
-#		wp_enqueue_script( 'jquery.sumoselect.min.js',  plugin_dir_url( __FILE__ ).'ext/sumoselect/jquery.sumoselect.min.js', array( 'jquery' ), $ThreeDee_current_version );
-#		wp_enqueue_style( 'sumoselect.css', plugin_dir_url( __FILE__ ).'ext/sumoselect/sumoselect.css', array(), $ThreeDee_current_version );
 		wp_enqueue_script( 'tooltipster.js',  plugin_dir_url( __FILE__ ).'ext/tooltipster/js/jquery.tooltipster.js', array( 'jquery' ), $ThreeDee_current_version );
 		wp_enqueue_style( 'tooltipster.css', plugin_dir_url( __FILE__ ).'ext/tooltipster/css/tooltipster.css', array(), $ThreeDee_current_version );
 
 		wp_enqueue_script( 'ThreeDee-threejs',  plugin_dir_url( __FILE__ ).'ext/threejs/three.min.js', array( 'jquery' ), $ThreeDee_current_version );
 		wp_enqueue_script( 'ThreeDee-threejs-detector',  plugin_dir_url( __FILE__ ).'ext/threejs/js/Detector.js', array( 'jquery' ), $ThreeDee_current_version );
 		wp_enqueue_script( 'ThreeDee-threejs-mirror',  plugin_dir_url( __FILE__ ).'ext/threejs/js/Mirror.js', array( 'jquery' ), $ThreeDee_current_version );
-//		wp_enqueue_script( 'ThreeDee-threejs-reflector',  plugin_dir_url( __FILE__ ).'ext/threejs/js/objects/Reflector.js', array( 'jquery' ), $ThreeDee_current_version );
 		wp_enqueue_script( 'ThreeDee-threejs-controls',  plugin_dir_url( __FILE__ ).'ext/threejs/js/controls/OrbitControls.js', array( 'jquery' ), $ThreeDee_current_version );
 		wp_enqueue_script( 'ThreeDee-threejs-canvas-renderer',  plugin_dir_url( __FILE__ ).'ext/threejs/js/renderers/CanvasRenderer.js', array( 'jquery' ), $ThreeDee_current_version );
 		wp_enqueue_script( 'ThreeDee-threejs-projector-renderer',  plugin_dir_url( __FILE__ ).'ext/threejs/js/renderers/Projector.js', array( 'jquery' ), $ThreeDee_current_version );
@@ -166,12 +163,12 @@ function ThreeDee_enqueue_scripts_backend() {
 		wp_enqueue_script( 'ThreeDee-threejs-vrml-loader',  plugin_dir_url( __FILE__ ).'ext/threejs/js/loaders/VRMLLoader.js', array( 'jquery' ), $ThreeDee_current_version );
 		wp_enqueue_script( 'ThreeDee-threejs-draco-loader',  plugin_dir_url( __FILE__ ).'ext/threejs/js/loaders/DRACOLoader.js', array( 'jquery' ), $ThreeDee_current_version );
 		wp_enqueue_script( 'ThreeDee-threejs-gltf-loader',  plugin_dir_url( __FILE__ ).'ext/threejs/js/loaders/GLTFLoader.js', array( 'jquery' ), $ThreeDee_current_version );
-#		wp_enqueue_script( 'ThreeDee-threejs-loader-support',  plugin_dir_url( __FILE__ ).'ext/threejs/js/loaders/LoaderSupport.js', array( 'jquery' ), $ThreeDee_current_version );
-#		wp_enqueue_script( 'ThreeDee-threejs-obj-loader2',  plugin_dir_url( __FILE__ ).'ext/threejs/js/loaders/OBJLoader2.js', array( 'jquery' ), $ThreeDee_current_version );
 		wp_enqueue_script( 'ThreeDee-threejs-mtl-loader',  plugin_dir_url( __FILE__ ).'ext/threejs/js/loaders/MTLLoader.js', array( 'jquery' ), $ThreeDee_current_version );
 		wp_enqueue_script( 'ThreeDee-backend-model.js',  plugin_dir_url( __FILE__ ).'js/ThreeDee-backend-model.js', array( 'jquery' ), $ThreeDee_current_version );
+		
 		wp_enqueue_style( 'jquery-ui.min.css', plugin_dir_url( __FILE__ ).'ext/jquery-ui/jquery-ui.min.css', array(), $ThreeDee_current_version );
 		wp_enqueue_style( 'ThreeDee-backend.css', plugin_dir_url( __FILE__ ).'css/ThreeDee-backend.css', array(), $ThreeDee_current_version );
+		wp_enqueue_style( 'grayshift.css', plugin_dir_url( __FILE__ ).'css/grayshift.min.css', array(), $ThreeDee_current_version );
 
 		wp_localize_script( 'ThreeDee-backend-model.js', 'ThreeDee',
 			array(
@@ -221,7 +218,6 @@ function ThreeDee_enqueue_scripts_backend() {
 				'text_model_repair_facets_added' => __( 'Facets added', 'ThreeDee' ),
 				'text_model_repair_facets_reversed' => __( 'Facets reversed', 'ThreeDee' ),
 				'text_model_repair_backwards_edges' => __( 'Backwards edges', 'ThreeDee' ),
-//				'text_upload_model' => __( "Please upload the model first!", 'ThreeDee' ),
 				'text_repairing_mtl' => __( 'Can not repair textured models yet!', 'ThreeDee' ),
 				'text_repairing_only' => __( 'Can repair only STL and OBJ models', 'ThreeDee' ),
 				'text_repairing_alert' => __( "The model will be sent to our server for repair.\nRepairing some models with very faulty geometries may result in broken models.\nClick OK if you agree.", 'ThreeDee' ),
@@ -1090,13 +1086,13 @@ function ThreeDee_shortcode ($atts) {
 	<?php if ($show_controls=='on' && ($display_mode=='3d_model' || $display_mode=='')) { ?>
 	<div id="ThreeDee-model-controls">
 		<ul id="ThreeDee-model-controls-list">
-		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleFullScreen();"><img alt="<?php _e('Fullscreen', 'ThreeDee');?>" title="<?php _e('Fullscreen', 'ThreeDee');?>" id="ThreeDee-controls-fullscreen" src="<?php echo plugins_url( 'woo-3d-viewer/images/fullscreen.png'); ?>"></a>
-		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleWireframe();"><img alt="<?php _e('Wireframe', 'ThreeDee');?>" title="<?php _e('Wireframe', 'ThreeDee');?>" id="ThreeDee-controls-wireframe" src="<?php echo plugins_url( 'woo-3d-viewer/images/wireframe.png'); ?>"></a>
-		<li><a href="javascript:void(0)" onclick="ThreeDeeZoomIn();"><img alt="<?php _e('Zoom In', 'ThreeDee');?>" title="<?php _e('Zoom In', 'ThreeDee');?>" id="ThreeDee-controls-zoomin" src="<?php echo plugins_url( 'woo-3d-viewer/images/zoom_in.png'); ?>"></a>
-		<li><a href="javascript:void(0)" onclick="ThreeDeeZoomOut();"><img alt="<?php _e('Zoom Out', 'ThreeDee');?>" title="<?php _e('Zoom Out', 'ThreeDee');?>" id="ThreeDee-controls-zoomout" src="<?php echo plugins_url( 'woo-3d-viewer/images/zoom_out.png'); ?>"></a>
-		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleRotation();"><img alt="<?php _e('Rotation', 'ThreeDee');?>" title="<?php _e('Rotation', 'ThreeDee');?>" id="ThreeDee-controls-rotation" src="<?php echo plugins_url( 'woo-3d-viewer/images/rotation.png'); ?>"></a>
-		<li><a href="javascript:void(0)" onclick="ThreeDeeScreenshot();" id="ThreeDee-screenshot"><img alt="<?php _e('Screenshot', 'ThreeDee');?>" title="<?php _e('Screenshot', 'ThreeDee');?>" id="ThreeDee-controls-screenshot" src="<?php echo plugins_url( 'woo-3d-viewer/images/screenshot.png'); ?>"></a>
-		<li><a href="#ThreeDee-popup1" class="ThreeDee-button"><img alt="<?php _e('Help', 'ThreeDee');?>" title="<?php _e('Help', 'ThreeDee');?>" id="ThreeDee-controls-help" src="<?php echo plugins_url( 'woo-3d-viewer/images/help.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleFullScreen();"><img alt="<?php _e('Fullscreen', 'ThreeDee');?>" title="<?php _e('Fullscreen', 'ThreeDee');?>" id="ThreeDee-controls-fullscreen" src="<?php echo plugins_url( 'threedee/images/fullscreen.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleWireframe();"><img alt="<?php _e('Wireframe', 'ThreeDee');?>" title="<?php _e('Wireframe', 'ThreeDee');?>" id="ThreeDee-controls-wireframe" src="<?php echo plugins_url( 'threedee/images/wireframe.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeZoomIn();"><img alt="<?php _e('Zoom In', 'ThreeDee');?>" title="<?php _e('Zoom In', 'ThreeDee');?>" id="ThreeDee-controls-zoomin" src="<?php echo plugins_url( 'threedee/images/zoom_in.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeZoomOut();"><img alt="<?php _e('Zoom Out', 'ThreeDee');?>" title="<?php _e('Zoom Out', 'ThreeDee');?>" id="ThreeDee-controls-zoomout" src="<?php echo plugins_url( 'threedee/images/zoom_out.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleRotation();"><img alt="<?php _e('Rotation', 'ThreeDee');?>" title="<?php _e('Rotation', 'ThreeDee');?>" id="ThreeDee-controls-rotation" src="<?php echo plugins_url( 'threedee/images/rotation.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeScreenshot();" id="ThreeDee-screenshot"><img alt="<?php _e('Screenshot', 'ThreeDee');?>" title="<?php _e('Screenshot', 'ThreeDee');?>" id="ThreeDee-controls-screenshot" src="<?php echo plugins_url( 'threedee/images/screenshot.png'); ?>"></a>
+		<li><a href="#ThreeDee-popup1" class="ThreeDee-button"><img alt="<?php _e('Help', 'ThreeDee');?>" title="<?php _e('Help', 'ThreeDee');?>" id="ThreeDee-controls-help" src="<?php echo plugins_url( 'threedee/images/help.png'); ?>"></a>
 		</ul>
 	</div>
 	<div id="ThreeDee-popup1" class="ThreeDee-overlay">
@@ -1337,13 +1333,13 @@ function ThreeDee_woocommerce_single_product_image_html ($image_url, $post_id) {
 	<?php if ($product_show_controls=='on' && ($display_mode=='3d_model' || $display_mode=='')) { ?>
 	<div id="ThreeDee-model-controls">
 		<ul id="ThreeDee-model-controls-list">
-		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleFullScreen();"><img alt="<?php _e('Fullscreen', 'ThreeDee');?>" title="<?php _e('Fullscreen', 'ThreeDee');?>" id="ThreeDee-controls-fullscreen" src="<?php echo plugins_url( 'woo-3d-viewer/images/fullscreen.png'); ?>"></a>
-		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleWireframe();"><img alt="<?php _e('Wireframe', 'ThreeDee');?>" title="<?php _e('Wireframe', 'ThreeDee');?>" id="ThreeDee-controls-wireframe" src="<?php echo plugins_url( 'woo-3d-viewer/images/wireframe.png'); ?>"></a>
-		<li><a href="javascript:void(0)" onclick="ThreeDeeZoomIn();"><img alt="<?php _e('Zoom In', 'ThreeDee');?>" title="<?php _e('Zoom In', 'ThreeDee');?>" id="ThreeDee-controls-zoomin" src="<?php echo plugins_url( 'woo-3d-viewer/images/zoom_in.png'); ?>"></a>
-		<li><a href="javascript:void(0)" onclick="ThreeDeeZoomOut();"><img alt="<?php _e('Zoom Out', 'ThreeDee');?>" title="<?php _e('Zoom Out', 'ThreeDee');?>" id="ThreeDee-controls-zoomout" src="<?php echo plugins_url( 'woo-3d-viewer/images/zoom_out.png'); ?>"></a>
-		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleRotation();"><img alt="<?php _e('Rotation', 'ThreeDee');?>" title="<?php _e('Rotation', 'ThreeDee');?>" id="ThreeDee-controls-rotation" src="<?php echo plugins_url( 'woo-3d-viewer/images/rotation.png'); ?>"></a>
-		<li><a href="javascript:void(0)" onclick="ThreeDeeScreenshot();" id="ThreeDee-screenshot"><img alt="<?php _e('Screenshot', 'ThreeDee');?>" title="<?php _e('Screenshot', 'ThreeDee');?>" id="ThreeDee-controls-screenshot" src="<?php echo plugins_url( 'woo-3d-viewer/images/screenshot.png'); ?>"></a>
-		<li><a href="#ThreeDee-popup1" class="ThreeDee-button"><img alt="<?php _e('Help', 'ThreeDee');?>" title="<?php _e('Help', 'ThreeDee');?>" id="ThreeDee-controls-help" src="<?php echo plugins_url( 'woo-3d-viewer/images/help.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleFullScreen();"><img alt="<?php _e('Fullscreen', 'ThreeDee');?>" title="<?php _e('Fullscreen', 'ThreeDee');?>" id="ThreeDee-controls-fullscreen" src="<?php echo plugins_url( 'threedee/images/fullscreen.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleWireframe();"><img alt="<?php _e('Wireframe', 'ThreeDee');?>" title="<?php _e('Wireframe', 'ThreeDee');?>" id="ThreeDee-controls-wireframe" src="<?php echo plugins_url( 'threedee/images/wireframe.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeZoomIn();"><img alt="<?php _e('Zoom In', 'ThreeDee');?>" title="<?php _e('Zoom In', 'ThreeDee');?>" id="ThreeDee-controls-zoomin" src="<?php echo plugins_url( 'threedee/images/zoom_in.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeZoomOut();"><img alt="<?php _e('Zoom Out', 'ThreeDee');?>" title="<?php _e('Zoom Out', 'ThreeDee');?>" id="ThreeDee-controls-zoomout" src="<?php echo plugins_url( 'threedee/images/zoom_out.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeToggleRotation();"><img alt="<?php _e('Rotation', 'ThreeDee');?>" title="<?php _e('Rotation', 'ThreeDee');?>" id="ThreeDee-controls-rotation" src="<?php echo plugins_url( 'threedee/images/rotation.png'); ?>"></a>
+		<li><a href="javascript:void(0)" onclick="ThreeDeeScreenshot();" id="ThreeDee-screenshot"><img alt="<?php _e('Screenshot', 'ThreeDee');?>" title="<?php _e('Screenshot', 'ThreeDee');?>" id="ThreeDee-controls-screenshot" src="<?php echo plugins_url( 'threedee/images/screenshot.png'); ?>"></a>
+		<li><a href="#ThreeDee-popup1" class="ThreeDee-button"><img alt="<?php _e('Help', 'ThreeDee');?>" title="<?php _e('Help', 'ThreeDee');?>" id="ThreeDee-controls-help" src="<?php echo plugins_url( 'threedee/images/help.png'); ?>"></a>
 		</ul>
 	</div>
 	<div id="ThreeDee-popup1" class="ThreeDee-overlay">
