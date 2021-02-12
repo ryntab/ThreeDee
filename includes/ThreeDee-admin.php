@@ -72,7 +72,7 @@ jQuery(document).ready(function() {
 });
 </script>
 <div class="wrap">
-	<h2><?php _e( 'ThreeDeeiewer Dashboard', 'ThreeDee' );?></h2>
+	<h2><?php _e( 'ThreeDee Settings', 'ThreeDee' );?></h2>
 	<div id="ThreeDee_tabs">
 		<ul>
 			<li><a href="#ThreeDee_tabs-0"><?php _e( 'General Settings', 'pizzatime' );?></a></li>
@@ -86,7 +86,7 @@ jQuery(document).ready(function() {
 				<p><b><?php _e( 'Default Settings', 'ThreeDee' );?></b></p>
 				<table>
 					<tr>
-						<td><?php _e( 'Canvas Resolution', 'ThreeDee' );?></td>
+						<td><?php _e( 'Object Dimensions', 'ThreeDee' );?></td>
 						<td><input size="3" type="text"  placeholder="<?php _e( 'Width', 'ThreeDee' );?>" name="ThreeDee_settings[canvas_width]" value="<?php echo $settings['canvas_width'];?>">px &times; <input size="3"  type="text" placeholder="<?php _e( 'Height', 'ThreeDee' );?>" name="ThreeDee_settings[canvas_height]" value="<?php echo $settings['canvas_height'];?>">px</td>
 					</tr>
 					<tr>
@@ -96,7 +96,7 @@ jQuery(document).ready(function() {
 								<option <?php if ( $settings['shading']=='flat' ) echo 'selected';?> value="flat"><?php _e( 'Flat', 'ThreeDee' );?></option>
 								<option <?php if ( $settings['shading']=='smooth' ) echo 'selected';?> value="smooth"><?php _e( 'Smooth', 'ThreeDee' );?></option>
 							</select> 
-							<img class="ThreeDee-tooltip" data-title="<img src='<?php echo plugins_url( 'woo-3d-viewer/images/shading.jpg' );?>'>" src="<?php echo plugins_url( 'woo-3d-viewer/images/question.png' ); ?>">
+							<img class="ThreeDee-tooltip" data-title="<img src='<?php echo plugins_url( 'threedee/images/shading.jpg' );?>'>" src="<?php echo plugins_url( 'threedee/images/question.png' ); ?>">
 						</td>
 					</tr>
 					<tr>
@@ -124,19 +124,19 @@ jQuery(document).ready(function() {
 						<td>
 							<table>
 								<tr>
-									<td><input type="hidden" name="ThreeDee_settings[show_light_source8]" value="0"><input type="checkbox" name="ThreeDee_settings[show_light_source8]" <?php if ($settings['show_light_source8']=='on') echo 'checked';?>></td>
-									<td><input type="hidden" name="ThreeDee_settings[show_light_source1]" value="0"><input type="checkbox" name="ThreeDee_settings[show_light_source1]" <?php if ($settings['show_light_source1']=='on') echo 'checked';?>></td>
-									<td><input type="hidden" name="ThreeDee_settings[show_light_source2]" value="0"><input type="checkbox" name="ThreeDee_settings[show_light_source2]" <?php if ($settings['show_light_source2']=='on') echo 'checked';?>></td>
+									<td><input type="hidden" name="ThreeDee_settings[show_light_source8]" value="0"><input class="form-check-input" type="checkbox" name="ThreeDee_settings[show_light_source8]" <?php if ($settings['show_light_source8']=='on') echo 'checked';?>></td>
+									<td><input type="hidden" name="ThreeDee_settings[show_light_source1]" value="0"><input class="form-check-input" type="checkbox" name="ThreeDee_settings[show_light_source1]" <?php if ($settings['show_light_source1']=='on') echo 'checked';?>></td>
+									<td><input type="hidden" name="ThreeDee_settings[show_light_source2]" value="0"><input class="form-check-input" type="checkbox" name="ThreeDee_settings[show_light_source2]" <?php if ($settings['show_light_source2']=='on') echo 'checked';?>></td>
 								</tr>
 								<tr>
-									<td><input type="hidden" name="ThreeDee_settings[show_light_source7]" value="0"><input type="checkbox" name="ThreeDee_settings[show_light_source7]" <?php if ($settings['show_light_source7']=='on') echo 'checked';?>></td>
-									<td><input type="hidden" name="ThreeDee_settings[show_light_source9]" value="0"><input type="checkbox" name="ThreeDee_settings[show_light_source9]" <?php if ($settings['show_light_source9']=='on') echo 'checked';?>></td>
-									<td><input type="hidden" name="ThreeDee_settings[show_light_source3]" value="0"><input type="checkbox" name="ThreeDee_settings[show_light_source3]" <?php if ($settings['show_light_source3']=='on') echo 'checked';?>></td>
+									<td><input type="hidden" name="ThreeDee_settings[show_light_source7]" value="0"><input class="form-check-input" type="checkbox" name="ThreeDee_settings[show_light_source7]" <?php if ($settings['show_light_source7']=='on') echo 'checked';?>></td>
+									<td><input type="hidden" name="ThreeDee_settings[show_light_source9]" value="0"><input class="form-check-input" type="checkbox" name="ThreeDee_settings[show_light_source9]" <?php if ($settings['show_light_source9']=='on') echo 'checked';?>></td>
+									<td><input type="hidden" name="ThreeDee_settings[show_light_source3]" value="0"><input class="form-check-input" type="checkbox" name="ThreeDee_settings[show_light_source3]" <?php if ($settings['show_light_source3']=='on') echo 'checked';?>></td>
 								</tr>
 								<tr>
-									<td><input type="hidden" name="ThreeDee_settings[show_light_source6]" value="0"><input type="checkbox" name="ThreeDee_settings[show_light_source6]" <?php if ($settings['show_light_source6']=='on') echo 'checked';?>></td>
-									<td><input type="hidden" name="ThreeDee_settings[show_light_source5]" value="0"><input type="checkbox" name="ThreeDee_settings[show_light_source5]" <?php if ($settings['show_light_source5']=='on') echo 'checked';?>></td>
-									<td><input type="hidden" name="ThreeDee_settings[show_light_source4]" value="0"><input type="checkbox" name="ThreeDee_settings[show_light_source4]" <?php if ($settings['show_light_source4']=='on') echo 'checked';?>></td>
+									<td><input type="hidden" name="ThreeDee_settings[show_light_source6]" value="0"><input class="form-check-input" type="checkbox" name="ThreeDee_settings[show_light_source6]" <?php if ($settings['show_light_source6']=='on') echo 'checked';?>></td>
+									<td><input type="hidden" name="ThreeDee_settings[show_light_source5]" value="0"><input class="form-check-input" type="checkbox" name="ThreeDee_settings[show_light_source5]" <?php if ($settings['show_light_source5']=='on') echo 'checked';?>></td>
+									<td><input type="hidden" name="ThreeDee_settings[show_light_source4]" value="0"><input class="form-check-input" type="checkbox" name="ThreeDee_settings[show_light_source4]" <?php if ($settings['show_light_source4']=='on') echo 'checked';?>></td>
 								</tr>
 
 							</table>
@@ -167,13 +167,13 @@ jQuery(document).ready(function() {
 					<tr>
 						<td><?php _e( 'Show Toobar', 'ThreeDee' );?></td>
 						<td><input type="hidden" name="ThreeDee_settings[show_controls]" value="0"><input type="checkbox" name="ThreeDee_settings[show_controls]" <?php if ($settings['show_controls']=='on') echo 'checked';?>>
-							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Enables frontend tools: fullscreen, zoom, auto rotation, screenshot', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'woo-3d-viewer/images/question.png' ); ?>">
+							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Enables frontend tools: fullscreen, zoom, auto rotation, screenshot', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'threedee/images/question.png' ); ?>">
 						</td>
 					</tr>
 					<tr>
 						<td><?php _e( 'Enable Controls (Zoom/Pan)', 'ThreeDee' );?></td>
 						<td><input type="hidden" name="ThreeDee_settings[enable_controls]" value="0"><input type="checkbox" name="ThreeDee_settings[enable_controls]" <?php if ($settings['enable_controls']=='on') echo 'checked';?>>
-							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Enables manual controls (zoom/pan) by mouse or swipe', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'woo-3d-viewer/images/question.png' ); ?>">
+							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Enables manual controls (zoom/pan) by mouse or swipe', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'threedee/images/question.png' ); ?>">
 						</td>
 					</tr>
 					<tr>
@@ -209,13 +209,13 @@ jQuery(document).ready(function() {
 						<td>
 							<input type="hidden" name="ThreeDee_settings[load_everywhere]" value="0">
 							<input type="checkbox" name="ThreeDee_settings[load_everywhere]" <?php if ($settings['load_everywhere']=='on') echo 'checked';?>>
-							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Enable if you need to load ThreeDee css and js files on all pages of the site.', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'woo-3d-viewer/images/question.png' ); ?>">
+							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Enable if you need to load ThreeDee css and js files on all pages of the site.', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'threedee/images/question.png' ); ?>">
 						</td>
 					</tr>
 					<tr>
 						<td><?php _e( 'File Chunk Size', 'ThreeDee' );?></td>
 						<td><input type="text" size="1" name="ThreeDee_settings[file_chunk_size]" value="<?php echo $settings['file_chunk_size'];?>">&nbsp;<?php _e('mb', 'ThreeDee');?>
-							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Used for uploading WEBM and GIF files rendered by the plugin. Keep it under upload_max_filesize and post_max_size PHP directives.', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'woo-3d-viewer/images/question.png' ); ?>">
+							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Used for uploading WEBM and GIF files rendered by the plugin. Keep it under upload_max_filesize and post_max_size PHP directives.', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'threedee/images/question.png' ); ?>">
 						</td>
 
 					</tr>
@@ -225,7 +225,7 @@ jQuery(document).ready(function() {
 						<td>
 							<input type="hidden" name="ThreeDee_settings[mobile_no_animation]" value="0">
 							<input type="checkbox" name="ThreeDee_settings[mobile_no_animation]" <?php if ($settings['mobile_no_animation']=='on') echo 'checked';?>>
-							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Disable rotation on mobile devices for better performance.', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'woo-3d-viewer/images/question.png' ); ?>">
+							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Disable rotation on mobile devices for better performance.', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'threedee/images/question.png' ); ?>">
 						</td>
 					</tr>
 					<tr>
@@ -233,7 +233,7 @@ jQuery(document).ready(function() {
 						<td>
 							<input type="hidden" name="ThreeDee_settings[model_compression]" value="0">
 							<input type="checkbox" name="ThreeDee_settings[model_compression]" disabled>
-							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Compress models (ZIP) for faster loading.', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'woo-3d-viewer/images/question.png' ); ?>">&nbsp;
+							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Compress models (ZIP) for faster loading.', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'threedee/images/question.png' ); ?>">&nbsp;
 							<?php _e('Compress models larger than', 'ThreeDee');?><input type="text" size="2" name="ThreeDee_settings[model_compression_threshold]" disabled>&nbsp;<?php _e('mb', 'ThreeDee');?>
 							<?php 
 							if (!class_exists('ZipArchive')) echo '<p><span style="color:red;">'.__('PHP zip extension is not enabled. Contact your hosting tech support to enable it.').'</span></p>';
@@ -246,9 +246,9 @@ jQuery(document).ready(function() {
 						<td>
 							<input type="hidden" name="ThreeDee_settings[proxy]" value="0">
 							<input type="checkbox" name="ThreeDee_settings[proxy]" disabled>
-							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Proxy makes possible loading models from 3rd party sites.', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'woo-3d-viewer/images/question.png' ); ?>">&nbsp;
+							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Proxy makes possible loading models from 3rd party sites.', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'threedee/images/question.png' ); ?>">&nbsp;
 							<?php _e('Trusted domains', 'ThreeDee');?>:<input type="text" size="30" name="ThreeDee_settings[proxy_domains]" disabled>&nbsp;
-							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Comma delimited list of domains you are loading models from. Please include both www and non-www domains, i.e.: example1.com, www.example1.com', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'woo-3d-viewer/images/question.png' ); ?>">&nbsp;
+							<img class="ThreeDee-tooltip" data-title="<?php htmlentities(_e( 'Comma delimited list of domains you are loading models from. Please include both www and non-www domains, i.e.: example1.com, www.example1.com', 'ThreeDee' ));?>" src="<?php echo plugins_url( 'threedee/images/question.png' ); ?>">&nbsp;
 							&nbsp;Unlock in <a href="http://ThreeDeeiewer.wp3dprinting.com/">PRO version</a><br><br>
 						</td>
 					</tr>
@@ -258,7 +258,7 @@ jQuery(document).ready(function() {
 
 				</table>
 				<p class="submit">
-					<input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'ThreeDee' ) ?>" />
+					<input type="submit" class="btn btn-lg btn-primary" value="<?php _e( 'Save Changes', 'ThreeDee' ) ?>" />
 				</p>
 			</form>
 		</div>  
@@ -402,7 +402,7 @@ function ThreeDee_meta_box_output () {
 		if (($product_model!='' || $product_image_png!='' || $product_image_gif!='' || $product_video_webm!='')) {
 		?>
 		<div id="ThreeDee_dialog" style="display:none;">
-		<div id="ThreeDee-viewer" style="<?php if ($product_model=='') echo 'display:none;';?>">
+		<div id="threedee" style="<?php if ($product_model=='') echo 'display:none;';?>">
 			<canvas id="ThreeDee-cv" width="<?php echo esc_attr($settings['canvas_width']);?>" height="<?php echo esc_attr($settings['canvas_height']);?>" style="border: 1px solid;max-width:90%;min-width:640px;min-height:480px;"></canvas>
 		</div>
 		<p style="display:none;" id="ThreeDee-convert1" class="ThreeDee-status2">&#9888; <?php _e('For best performance <a href="https://modelconverter.com/convert.html">convert</a> the model to GLB format.', 'ThreeDee'); ?></p>
