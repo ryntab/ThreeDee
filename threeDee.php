@@ -15,6 +15,7 @@ if (!defined('ABSPATH')) {
 
 class threeDee
 {
+
 	public function __construct()
 	{
 
@@ -32,18 +33,7 @@ class threeDee
 			add_action('wp_ajax_ThreeDee_handle_upload', 'ThreeDee_handle_upload');
 			add_action('wp_ajax_ThreeDee_handle_zip', 'ThreeDee_handle_zip');
 			#	add_action( 'wp_ajax_nopriv_ThreeDee_handle_upload', 'ThreeDee_handle_upload' );
-
-			include 'includes/ThreeDee-admin.php';
-
-			function admin_autoload($class_name)
-			{
-				if (is_file('CLASSES/' . $class_name . '.php')) {
-					require_once 'CLASSES/' . $class_name . '.php';
-				} else if (is_file('ADMIN/TPL/SOME_FOLDER2/' . $class_name . '.php')) {
-					require_once 'ADMIN/TPL/SOME_FOLDER2/' . $class_name . '.php';
-				}
-			}
-			spl_autoload_register("admin_autoload");
+			include 'includes/admin/admin-menu.php';
 		} else {
 			add_action('wp_enqueue_scripts', 'ThreeDee_enqueue_scripts_frontend');
 		}

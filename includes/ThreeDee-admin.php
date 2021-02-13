@@ -11,12 +11,6 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly
 }
 
-
-
-
-
-
-
 add_action('add_meta_boxes', 'ThreeDee_add_meta_boxes', 30);
 function ThreeDee_add_meta_boxes()
 {
