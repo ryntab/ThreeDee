@@ -15,7 +15,7 @@ function ThreeDee_enqueue_scripts_backend()
         wp_enqueue_script('jquery-ui-tabs');
         wp_enqueue_script('jquery-ui-dialog');
         wp_enqueue_script('tooltipster.js',  plugin_dir_url(__FILE__) . 'assets/js/tooltipster/js/jquery.tooltipster.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_style('tooltipster.css', plugin_dir_url(__FILE__) . 'ext/tooltipster/css/tooltipster.css', array(), $ThreeDee_current_version);
+        wp_enqueue_style('tooltipster.css', plugin_dir_url(__FILE__) . 'assets/js/tooltipster/css/tooltipster.css', array(), $ThreeDee_current_version);
 
         wp_enqueue_script('ThreeDee-threejs',  plugin_dir_url(__FILE__) . 'assets/js/threejs/three.min.js', array('jquery'), $ThreeDee_current_version);
         wp_enqueue_script('ThreeDee-threejs-detector',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/Detector.js', array('jquery'), $ThreeDee_current_version);
@@ -31,8 +31,8 @@ function ThreeDee_enqueue_scripts_backend()
         wp_enqueue_script('ThreeDee-threejs-mtl-loader',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/loaders/MTLLoader.js', array('jquery'), $ThreeDee_current_version);
         wp_enqueue_script('ThreeDee-backend-model.js',  plugin_dir_url(__FILE__) . 'assets/js/ThreeDee-backend-model.js', array('jquery'), $ThreeDee_current_version);
 
-        wp_enqueue_style('jquery-ui.min.css', plugin_dir_url(__FILE__) . 'ext/jquery-ui/jquery-ui.min.css', array(), $ThreeDee_current_version);
-        wp_enqueue_style('ThreeDee-backend.css', plugin_dir_url(__FILE__) . 'css/ThreeDee-backend.css', array(), $ThreeDee_current_version);
+        wp_enqueue_style('jquery-ui.min.css', plugin_dir_url(__FILE__) . 'assets/css/jquery-ui/jquery-ui.min.css', array(), $ThreeDee_current_version);
+        wp_enqueue_style('ThreeDee-backend.css', plugin_dir_url(__FILE__) . 'assets/css/ThreeDee-backend.css', array(), $ThreeDee_current_version);
 
         wp_localize_script(
             'ThreeDee-backend-model.js',
@@ -100,3 +100,13 @@ function ThreeDee_enqueue_scripts_backend()
     }
 }
 add_action('admin_enqueue_scripts', 'ThreeDee_enqueue_scripts_backend');
+
+
+add_action( 'admin_enqueue_scripts', 'ThreeDee_add_color_picker' );
+function ThreeDee_add_color_picker( $hook ) {
+	if ( is_admin() ) {
+		wp_enqueue_media();
+		wp_enqueue_style( 'wp-color-picker' );
+		wp_enqueue_script( 'custom-script-handle', plugins_url( 'assets/js/ThreeDee-backend.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+	}
+}

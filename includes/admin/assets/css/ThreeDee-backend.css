@@ -1,0 +1,76 @@
+.ThreeDee-x-axis {
+	color:rgb(255, 102, 0);
+}
+.ThreeDee-y-axis {
+	color:rgb(51, 51, 255);
+}
+.ThreeDee-z-axis {
+	color:rgb(51, 204, 51);
+}
+
+#rotation_x, #rotation_y, #rotation_z, #z_offset {
+	width:4em;
+	height:30px;
+	padding:0;
+	margin: 0 3px;
+	box-shadow:none;
+}
+
+.ThreeDee-separator {
+	width:0.5em;
+}
+
+#ThreeDee-rotation-controls {
+	text-align:center;
+}
+
+#ThreeDee-console {
+	display:none;
+	width:100%
+}
+
+#ThreeDee-canvas-uploading-image, #ThreeDee-repair-image, #ThreeDee-canvas-repair-image  {
+	width: auto !important;
+	height: auto !important;
+	display: none;
+}
+
+#ThreeDee-error-message {
+    display: none;
+}
+
+#canvas-stats {
+/*	position:absolute;*/
+	margin-top:5px;
+
+}
+.canvas-stats {
+        margin:5px;
+	width:auto; 
+	left:10px; 
+	top:10px; 
+	font:12px Courier New; 
+	color:red; 
+	background:transparent;
+	white-space:nowrap;
+}
+
+.ThreeDee-info {
+	clear:both;
+}
+
+#ThreeDee-file-stats-size, #ThreeDee-file-stats-polygons {
+	font-weight:bold;
+}
+
+div#ThreeDee-viewer p {
+	margin: 0;
+}
+
+.ThreeDee-preview {
+	max-width:100px;
+}
+
+.ui-dialog[aria-describedby="ThreeDee_dialog"] {
+	z-index:99999;
+}
