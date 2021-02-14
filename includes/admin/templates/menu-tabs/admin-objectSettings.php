@@ -3,7 +3,6 @@
     <form method="post" action="admin.php?page=ThreeDee#ThreeDee_tabs-0" enctype="multipart/form-data">
         <?php wp_nonce_field('ThreeDee-save-settings_'); ?>
         <input type="hidden" value="stl,obj,zip" name="file_extensions">
-        <hr>
         <p><b><?php _e('Default Settings', 'ThreeDee'); ?></b></p>
         <table>
             <tr>

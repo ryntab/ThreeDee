@@ -30,9 +30,11 @@ function ThreeDee_enqueue_scripts_backend()
         wp_enqueue_script('ThreeDee-threejs-gltf-loader',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/loaders/GLTFLoader.js', array('jquery'), $ThreeDee_current_version);
         wp_enqueue_script('ThreeDee-threejs-mtl-loader',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/loaders/MTLLoader.js', array('jquery'), $ThreeDee_current_version);
         wp_enqueue_script('ThreeDee-backend-model.js',  plugin_dir_url(__FILE__) . 'assets/js/ThreeDee-backend-model.js', array('jquery'), $ThreeDee_current_version);
-
-        wp_enqueue_style('jquery-ui.min.css', plugin_dir_url(__FILE__) . 'assets/css/jquery-ui/jquery-ui.min.css', array(), $ThreeDee_current_version);
+        wp_enqueue_script( 'ThreeDee-popper.js', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js');
+        wp_enqueue_script( 'ThreeDee-grayshift.js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.min.js' );
         wp_enqueue_style('ThreeDee-backend.css', plugin_dir_url(__FILE__) . 'assets/css/ThreeDee-backend.css', array(), $ThreeDee_current_version);
+        wp_enqueue_style('ThreeDee-grayshift.css', 'https://cdn.jsdelivr.net/gh/yanchokraev/grayshift@1.0.0/css/grayshift.min.css');
+    
 
         wp_localize_script(
             'ThreeDee-backend-model.js',
