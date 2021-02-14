@@ -7,29 +7,29 @@ function ThreeDee_enqueue_scripts_backend()
     $settings = get_option('ThreeDee_settings');
     $upload_dir = wp_upload_dir();
     //var_dump($upload_dir);exit;
-    wp_enqueue_script('js/ThreeDee-backend.js', plugin_dir_url(__FILE__) . 'js/ThreeDee-backend.js', array('jquery'), $ThreeDee_current_version);
+    //wp_enqueue_script('js/ThreeDee-backend.js', plugin_dir_url(__FILE__) . 'includes/assets/js/ThreeDee-backend.js', array('jquery'), $ThreeDee_current_version);
 
     if (isset($_GET['page']) && $_GET['page'] == 'ThreeDee' || (isset($_GET['post']) && is_numeric($_GET['post']) && $_GET['action'] == 'edit' && ThreeDee_is_ThreeDee($_GET['post']))) {
         wp_enqueue_script('jquery');
         wp_enqueue_script('jquery-ui-core');
         wp_enqueue_script('jquery-ui-tabs');
         wp_enqueue_script('jquery-ui-dialog');
-        wp_enqueue_script('tooltipster.js',  plugin_dir_url(__FILE__) . 'ext/tooltipster/js/jquery.tooltipster.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('tooltipster.js',  plugin_dir_url(__FILE__) . 'assets/js/tooltipster/js/jquery.tooltipster.js', array('jquery'), $ThreeDee_current_version);
         wp_enqueue_style('tooltipster.css', plugin_dir_url(__FILE__) . 'ext/tooltipster/css/tooltipster.css', array(), $ThreeDee_current_version);
 
-        wp_enqueue_script('ThreeDee-threejs',  plugin_dir_url(__FILE__) . 'ext/threejs/three.min.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-detector',  plugin_dir_url(__FILE__) . 'ext/threejs/js/Detector.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-mirror',  plugin_dir_url(__FILE__) . 'ext/threejs/js/Mirror.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-controls',  plugin_dir_url(__FILE__) . 'ext/threejs/js/controls/OrbitControls.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-canvas-renderer',  plugin_dir_url(__FILE__) . 'ext/threejs/js/renderers/CanvasRenderer.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-projector-renderer',  plugin_dir_url(__FILE__) . 'ext/threejs/js/renderers/Projector.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-stl-loader',  plugin_dir_url(__FILE__) . 'ext/threejs/js/loaders/STLLoader.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-obj-loader',  plugin_dir_url(__FILE__) . 'ext/threejs/js/loaders/OBJLoader.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-vrml-loader',  plugin_dir_url(__FILE__) . 'ext/threejs/js/loaders/VRMLLoader.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-draco-loader',  plugin_dir_url(__FILE__) . 'ext/threejs/js/loaders/DRACOLoader.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-gltf-loader',  plugin_dir_url(__FILE__) . 'ext/threejs/js/loaders/GLTFLoader.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-threejs-mtl-loader',  plugin_dir_url(__FILE__) . 'ext/threejs/js/loaders/MTLLoader.js', array('jquery'), $ThreeDee_current_version);
-        wp_enqueue_script('ThreeDee-backend-model.js',  plugin_dir_url(__FILE__) . 'js/ThreeDee-backend-model.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs',  plugin_dir_url(__FILE__) . 'assets/js/threejs/three.min.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-detector',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/Detector.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-mirror',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/Mirror.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-controls',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/controls/OrbitControls.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-canvas-renderer',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/renderers/CanvasRenderer.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-projector-renderer',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/renderers/Projector.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-stl-loader',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/loaders/STLLoader.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-obj-loader',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/loaders/OBJLoader.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-vrml-loader',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/loaders/VRMLLoader.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-draco-loader',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/loaders/DRACOLoader.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-gltf-loader',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/loaders/GLTFLoader.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-threejs-mtl-loader',  plugin_dir_url(__FILE__) . 'assets/js/threejs/js/loaders/MTLLoader.js', array('jquery'), $ThreeDee_current_version);
+        wp_enqueue_script('ThreeDee-backend-model.js',  plugin_dir_url(__FILE__) . 'assets/js/ThreeDee-backend-model.js', array('jquery'), $ThreeDee_current_version);
 
         wp_enqueue_style('jquery-ui.min.css', plugin_dir_url(__FILE__) . 'ext/jquery-ui/jquery-ui.min.css', array(), $ThreeDee_current_version);
         wp_enqueue_style('ThreeDee-backend.css', plugin_dir_url(__FILE__) . 'css/ThreeDee-backend.css', array(), $ThreeDee_current_version);
