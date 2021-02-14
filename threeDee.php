@@ -33,7 +33,7 @@ class threeDee
 			add_action('wp_ajax_ThreeDee_handle_upload', 'ThreeDee_handle_upload');
 			add_action('wp_ajax_ThreeDee_handle_zip', 'ThreeDee_handle_zip');
 			#	add_action( 'wp_ajax_nopriv_ThreeDee_handle_upload', 'ThreeDee_handle_upload' );
-			include 'includes/admin/admin-menu.php';
+			include 'includes/admin/admin.php';
 		} else {
 			add_action('wp_enqueue_scripts', 'ThreeDee_enqueue_scripts_frontend');
 		}

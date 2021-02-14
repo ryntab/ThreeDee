@@ -19,12 +19,9 @@
             <li><a href="#ThreeDee_tabs-2"><?php _e('Advanced Settings', 'pizzatime'); ?></a></li>
             <li><a href="#ThreeDee_tabs-3"><?php _e('Shortcode Builder', 'pizzatime'); ?></a></li>
         </ul>
-        <?php include('tabs/admin-globalSettings.php'); ?>
-        <?php include('tabs/admin-objectSettings.php'); ?>
-        <?php include('tabs/admin-advancedSettings.php'); ?>
-        <div id="ThreeDee_tabs-1">
-
-        </div>
+        <?php include('admin-globalSettings.php'); ?>
+        <?php include('admin-objectSettings.php'); ?>
+        <?php include('admin-advancedSettings.php'); ?>
         <div id="ThreeDee_tabs-3">
             <?php
             include_once('ThreeDee-admin-shortcode-builder.php');

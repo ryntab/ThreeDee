@@ -27,7 +27,6 @@ class threeDee_admin_menu
         }
 
         if (isset($_POST['ThreeDee_settings']) && !empty($_POST['ThreeDee_settings']) && check_admin_referer('ThreeDee-save-settings_')) {
-            #print_r($_POST['ThreeDee_settings']);
             $settings_update = array_map('sanitize_text_field', $_POST['ThreeDee_settings']);
 
             if (isset($_FILES['ThreeDee_settings']['tmp_name']['ajax_loader']) && strlen($_FILES['ThreeDee_settings']['tmp_name']['ajax_loader']) > 0) {
@@ -42,18 +41,13 @@ class threeDee_admin_menu
             } else {
                 $settings_update['view3d_button_image'] = $settings['view3d_button_image'];
             }
-            #print_r($settings_update);
-            #$settings_update['grid_color'] = '#ffffff';
             update_option('ThreeDee_settings', $settings_update);
         }
 
         $settings = ThreeDee_get_option('ThreeDee_settings');
-        #print_r($settings);
 
         add_thickbox();
-        # ThreeDee_check_install();
-        #var_dump($settings['grid_color']);
-        include 'templates/admin-settings.php';
+        include 'menu-tabs/admin-settings.php';
     }
 }
 
